@@ -6,9 +6,8 @@ body {
   background-color: hsl(30, 38%, 92%);
   height: 100vh;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 main {
   max-width: 650px;
