@@ -1,70 +1,75 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: hsl(30, 38%, 92%);
   height: 100vh;
-  margin: 0;
   display: grid;
-  place-items: center;
-}
-main {
-  max-width: 650px;
-  min-height: fit-content;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: 15px;
-  background-color: hsl(0, 0%, 100%);
-  overflow: hidden;
-}
-main img {
-  max-width: 100%;
-}
-main .details {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  place-content: center;
 }
 
-/* inner content */
+main {
+  width: 700px;
+  height: 525px;
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .image img {
+  width: 350px;
+}
+main .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
 main .details .product {
+  color: hsl(228, 12%, 48%);
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 main .details .product-title {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   color: hsl(212, 21%, 14%);
+  font-size: 40px;
+  margin: 0;
 }
 main .details .description {
+  color: hsl(228, 12%, 48%);
   line-height: 1.5;
 }
 main .details .price-details {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  align-items: center;
 }
-main .details .price {
-  font-family: 'Fraunces', serif;
+main .details .price-details .price {
+  font-family: "Fraunces", serif;
   color: hsl(158, 36%, 37%);
-  font-size: 30px;
-  padding-right: 30px;
+  font-size: 40px;
+  padding-right: 20px;
 }
-main .details .old-price {
-  margin-top: 10px;
+main .details .price-details .old-price {
+  color: hsl(228, 12%, 48%);
   text-decoration: line-through;
 }
 main .details .chart {
+  display: flex;
+  justify-content: center;
+}
+main .details .chart button {
+  display: inline-flex;
+  gap: 15px;
   border: none;
-  padding: 15px 80px;
   border-radius: 10px;
   background-color: hsl(158, 36%, 37%);
   color: hsl(0, 0%, 100%);
   font-weight: bold;
+  padding: 18px 80px;
 }
-main .details .product,
-main .details .old-price,
-main .details .description {
-  color: hsl(228, 12%, 48%);
-}
+main .details .chart button .icon {
+  width: 17px;
+}/*# sourceMappingURL=style.css.map */
