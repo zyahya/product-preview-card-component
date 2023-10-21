@@ -64,6 +64,10 @@ main {
         color: hsl(0, 0%, 100%);
         font-weight: bold;
         padding: 18px 80px;
+        cursor: pointer;
+        &:hover {
+          background-color: hsl(158, 36%, 29%);
+        }
         .icon {
           width: 17px;
         }
