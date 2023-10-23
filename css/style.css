@@ -1,79 +1,97 @@
+:root {
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-primary-500: hsl(158, 36%, 20%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   background-color: hsl(30, 38%, 92%);
-  height: 100vh;
+  margin: 1rem;
   display: grid;
   place-content: center;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
 main {
-  width: 700px;
-  height: 525px;
-  display: flex;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 15px;
+  border-radius: 0.6rem;
   overflow: hidden;
+  max-width: 600px;
 }
-main .image img {
-  width: 350px;
+@media (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-main .details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px;
+main .product {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
 }
-main .details .product {
-  color: hsl(228, 12%, 48%);
-  text-transform: uppercase;
+main .product .category {
   letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--clr-neutral-400);
 }
-main .details .product-title {
-  font-family: "Fraunces", serif;
-  color: hsl(212, 21%, 14%);
-  font-size: 40px;
+main .product .title {
+  font-family: var(--ff-accent);
   margin: 0;
 }
-main .details .description {
-  color: hsl(228, 12%, 48%);
-  line-height: 1.5;
+main .product .description {
+  color: var(--clr-neutral-400);
 }
-main .details .price-details {
-  display: inline-flex;
+main .product .price {
+  display: flex;
   align-items: center;
+  gap: 1rem;
 }
-main .details .price-details .price {
-  font-family: "Fraunces", serif;
-  color: hsl(158, 36%, 37%);
-  font-size: 40px;
-  padding-right: 20px;
+main .product .price .current-price {
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+  color: var(--clr-primary-400);
 }
-main .details .price-details .old-price {
-  color: hsl(228, 12%, 48%);
-  text-decoration: line-through;
+main .product .price .old-price {
+  color: var(--clr-neutral-400);
 }
-main .details .chart {
+main .product button {
+  border: none;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  font-weight: bold;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-main .details .chart button {
-  display: inline-flex;
-  gap: 15px;
-  border: none;
-  border-radius: 10px;
-  background-color: hsl(158, 36%, 37%);
-  color: hsl(0, 0%, 100%);
-  font-weight: bold;
-  padding: 18px 80px;
-  cursor: pointer;
+@media (min-width: 600px) {
+  main .product button {
+    padding: 0.6rem;
+  }
 }
-main .details .chart button:hover {
-  background-color: hsl(158, 36%, 29%);
-}
-main .details .chart button .icon {
-  width: 17px;
+main .product button::before {
+  content: "";
+  width: 15px;
+  height: 16px;
+  background-image: url("../images/icon-cart.svg");
 }/*# sourceMappingURL=style.css.map */
